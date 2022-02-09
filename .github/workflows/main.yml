@@ -35,7 +35,7 @@ jobs:
       - name: "Build & push Docker image"
         uses: mr-smithers-excellent/docker-build-push@v5
         with: 
-          dockerfile: Dockerfile
+          run: docker build -f Dockerfile -t Docker.io/repo/alpine:v1 -t Docker.io/repo/alpine:latest .
           image: repo/alpine
           password: "${{ secrets.DOCKER_PASSWORD }}"
           registry: Docker.io
