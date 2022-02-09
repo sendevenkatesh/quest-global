@@ -26,14 +26,6 @@ jobs:
           registry: Docker.io
           tags: "v1, latest"
           username: "${{ secrets.DOCKER_USERNAME }}"
-name: "java CI with Gradle"
-true: 
-  pull_request: 
-    branches: 
-      - master
-  push: 
-    branches: 
-      - master
 
 //## Dockerfile.ci
 
