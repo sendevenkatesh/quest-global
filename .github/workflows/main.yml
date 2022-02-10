@@ -37,6 +37,7 @@ jobs:
           path: target/
       - run: cat target/app.jar
       
+      
       - name: "Build & push Docker image"
         uses: mr-smithers-excellent/docker-build-push@v5
         with: 
@@ -46,5 +47,8 @@ jobs:
           registry: Docker.io
           tags: "v1, latest"
           username: "${{ secrets.DOCKER_USERNAME }}"
+      - run: Docker build -t alpine .
+      
+          
 
 
