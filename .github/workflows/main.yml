@@ -47,7 +47,7 @@ jobs:
           registry: Docker.io
           tags: "v1, latest"
           username: "${{ secrets.DOCKER_USERNAME }}"
-      - run: Docker build -t alpine .
+    
       
           
 
