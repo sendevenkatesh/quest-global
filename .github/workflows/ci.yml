@@ -19,4 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: mkdir  venky2/
+        run: | 
+            mkdir  venky2/
+            notepad venkat.txt
+            notepad venkat1.txt
+      
+        
+
