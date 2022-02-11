@@ -37,9 +37,9 @@ jobs:
           name: app
           path: target/
       - run: cat target/app.jar
-  job2: 
-   runs-on: ubuntu-latest
-   steps: 
+  #job2: 
+   #runs-on: ubuntu-latest
+   #steps: 
       - uses: actions/checkout@v2
       - name: docker login
         env:
