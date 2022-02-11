@@ -2,8 +2,7 @@ name: ci build
 on: 
   push:
     branches: [main]
-  pull_requests:
-    branches: [main]
+  
 jobs:
   job1:
     runs-on: ubuntu-latest
