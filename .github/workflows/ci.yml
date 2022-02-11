@@ -8,15 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: mkdir -p venky/
+        run: mkdir  venky/
 
   job2:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: mkdir -p venky1/
+        run: mkdir  venky1/
   job3:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: mkdir -p venky2/
+        run: mkdir  venky2/
