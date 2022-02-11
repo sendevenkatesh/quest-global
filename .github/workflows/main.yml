@@ -10,8 +10,9 @@ on:
   workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+ job1: 
   # This workflow contains a single job called "build"
-  build:    
+   
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -36,17 +37,28 @@ jobs:
           name: app
           path: target/
       - run: cat target/app.jar
+ job2: 
+  runs-on: ubuntu-latest
+  steps: 
+      - uses: actions/checkout@v2
+      - name: docker login
+        env:
+          DOCKER_USER: ${{secretes.DOCKER_USER}}
+          DOCKER_PASSWORD: ${{secretes.DOCKER_PASSWORD}}
+        run: |
+         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+         docker build . -f Dockerfile -t venkat/images:web2
+         docker push venkat/images:web2
       
-      
-      - name: "Build & push Docker image"
-        uses: mr-smithers-excellent/docker-build-push@v5
-        with: 
-          Dockerfile: Dockerfile
-          image: repo/alpine
-          password: "${{ secrets.DOCKER_PASSWORD }}"
-          registry: Docker.io
-          tags: "v1, latest"
-          username: "${{ secrets.DOCKER_USERNAME }}"
+     # - name: "Build & push Docker image"
+       # uses: mr-smithers-excellent/docker-build-push@v5
+        #with: 
+         # Dockerfile: Dockerfile
+          #image: repo/alpine
+          #password: "${{ secrets.DOCKER_PASSWORD }}"
+          #registry: Docker.io
+          #tags: "v1, latest"
+          #username: "${{ secrets.DOCKER_USERNAME }}"
     
       
           
