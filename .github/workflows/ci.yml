@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: touch /venky/text.txt
+        run: notepad ./venky/text1.txt
   job3:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: touch /venky/text.txt
+        run: notepad ./venky/text2.txt
