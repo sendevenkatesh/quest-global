@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: notepad myfile1.txt
+        run: mkdir -p venky1/
   job3:
     runs-on: ubuntu-latest
     steps:
       - name: create folder
-        run: notepad myfile2.txt
+        run: mkdir -p venky2/
