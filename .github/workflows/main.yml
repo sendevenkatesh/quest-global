@@ -18,6 +18,11 @@ jobs:
       - run: |
          curl \
          https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
+         
+         curl \
+         -X POST \
+         -H "Accept: application/vnd.github.v3+json" \
+         https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
       
           #curl \
           #-H "Accept: application/vnd.github.v3+json" \ 
