@@ -1,7 +1,6 @@
 name: webhook
 on: 
-  issues:
-    types: [opened]
+  push
  
 jobs:
   comment:
