@@ -19,7 +19,7 @@ jobs:
          curl \
          -X GET \
          -H "Accept: application/vnd.github.v3+json" \
-         https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/venky
+         https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/venky
          
        
         # curl \
