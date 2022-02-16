@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: create
-       run: mkdir folder
+       run: fail
        
   comment1:
      runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
          curl \
          -X GET \
          -H "Accept: application/vnd.github.v3+json" \
-         https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/vamshi
+         https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/venky
          
        
         # curl \
