@@ -13,7 +13,7 @@ jobs:
        curl -- request POST \
        --url https://api.github/repos/${{ github.repository }}/issues\
        
-       --header 'authorization: Bearer ${{ secretes.GITHUB_TOKEN}}'\
+       -H "Authorization: token OAUTH-TOKEN" ${{ secretes.GITHUB_TOKEN}}'\
        --header 'content-type: application/json'\
        --data '{
          "title": "issue:" ${{ github.sha }}",
