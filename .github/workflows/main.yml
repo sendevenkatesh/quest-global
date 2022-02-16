@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: create
-       run: mkdir file
+       run: mkdir folder
        
   comment1:
      runs-on: ubuntu-latest
@@ -17,12 +17,20 @@ jobs:
      steps: 
       - run: |
          curl \
-         https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
-         
-         curl \
-         -X POST \
+         -X GET \
          -H "Accept: application/vnd.github.v3+json" \
-         https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
+         https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/vamshi
+         
+       
+        # curl \
+         #-X GET \
+         #-H "Accept: application/vnd.github.v3+json" \
+         #https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
+         
+        # curl \
+         #-X POST \
+         #-H "Accept: application/vnd.github.v3+json" \
+          #https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
       
           #curl \
           #-H "Accept: application/vnd.github.v3+json" \ 
