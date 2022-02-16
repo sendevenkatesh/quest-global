@@ -19,20 +19,20 @@ jobs:
       WEBHOOK: ${{ secrets.WEBHOOK }}
      steps: 
       - run: |
-         curl \
-         -X POST \
-         -H "Accept: application/json" \
-         https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
+         #curl \
+         #-X POST \
+         #-H "Accept: application/json" \
+         #https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
          curl -L -X POST ${WEBHOOK}\
           -d '{
           "type": "message",
           "text": "New issue created"
                }'
        
-         curl \
-         -X GET \
-         -H "Accept: application/json" \
-         https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/vamshi
+         #curl \
+         #-X GET \
+         #-H "Accept: application/json" \
+         #https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/vamshi
          
        
          # curl \
