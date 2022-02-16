@@ -1,13 +1,17 @@
-name: webhook
-on: 
-  push
- 
+# .github/workflows/issue-on-push.yml
+on: [push]
+name: Create an issue on push
+permissions:
+  contents: read
+  issues: write 
 jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-     - name: create
-       run: mkdir folder
+      - uses: actions/checkout@v2
+      - uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        
   comment1:
      runs-on: ubuntu-latest
