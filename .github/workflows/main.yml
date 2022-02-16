@@ -16,9 +16,12 @@ jobs:
       WEBHOOK: ${{ secrets.WEBHOOK }}
      steps: 
       - run: |
-          curl \
-          -H "Accept: application/vnd.github.v3+json" \ 
-          https://github.com/sendevenkatesh/quest-global/settings/hooks\
+         curl \
+         https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
+      
+          #curl \
+          #-H "Accept: application/vnd.github.v3+json" \ 
+          #https://github.com/sendevenkatesh/quest-global/settings/hooks\
            '{
           "type" : "massage"
           "text" : "created"
