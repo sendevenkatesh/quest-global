@@ -1,18 +1,23 @@
-name: java CI with gradle
-on: [push]
+name: webhook
+on: 
+  issues:
+    types: [opened]
  
 jobs:
-  build:
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - name: create file
-        run: |
-          mkdir venky
-          touch file1
-      - shell: bash
-        run: |
-          curl \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/sendevenkatesh/quest-global/hooks
-
-
+     - name: create
+       run: mkdir file
+       
+  comment1:
+     runs-on: ubuntu-latest
+     needs: comment
+     env: 
+      WEBHOOK: ${{ secrets.WEBHOOK }}
+     steps: 
+      - run: |
+          curl https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5 --request POST &{WEBHOOK}\
+          --data-raw '{
+          "type" : "massage"
+          "text" : "created"
