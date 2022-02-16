@@ -11,12 +11,10 @@ jobs:
     - name: create th issue using REST API
       run: |
        curl -X POST \
-       https://github.com/sendevenkatesh/quest-global/${{ github.quest-global }}/issues\
-       
-       -H "Content-Type: application/json"\
+       https://github.com/sendevenkatesh/quest-global/${{ github.quest-global }}/issues \
        
        --data '{
-         "title": "issue:" ${{ github.sha }}",
+         "title": "Automated issue for commit:" ${{ github.sha }}",
          "body": "this issue Action workflow **${{ github.workflow}}**. \n\n
          }' \
        --fail
