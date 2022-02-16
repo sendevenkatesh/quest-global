@@ -18,13 +18,13 @@ jobs:
       - run: |
          curl \
          -X GET \
-         -H "Accept: application/vnd.github.v3+json" \
+         -H "Accept: application/json" \
          https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/venky
          
        
          # curl \
          #-X GET \
-         #-H "Accept: application/vnd.github.v3+json" \
+         #-H "Accept: application/json" \
          #https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
          
          curl \
