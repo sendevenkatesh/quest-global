@@ -11,9 +11,9 @@ jobs:
     - name: create th issue using REST API
       run: |
        curl -X POST \
-       url https://api.github/repos/${{ github.repository }}/issues\
+       https://github.com/sendevenkatesh/quest-global/${{ github.quest-global }}/issues\
        
-       -X POST -H "Content-Type: application/json"\
+       -H "Content-Type: application/json"\
        
        --data '{
          "title": "issue:" ${{ github.sha }}",
