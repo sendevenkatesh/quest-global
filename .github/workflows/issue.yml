@@ -7,10 +7,14 @@ permissions:
 jobs:
   comment:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps: 
+    - name: create th issue using REST API
+      run: |
+       curl -- request POST \
+       --url 
+       
+      
+   
        
   comment1:
      runs-on: ubuntu-latest
