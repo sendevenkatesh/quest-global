@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: create
-       run: fail
+       run: mkdir folder
        
   comment1:
      runs-on: ubuntu-latest
