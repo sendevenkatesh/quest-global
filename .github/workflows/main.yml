@@ -22,7 +22,7 @@ jobs:
           #curl \
           #-H "Accept: application/vnd.github.v3+json" \ 
           #https://github.com/sendevenkatesh/quest-global/settings/hooks\
-          --data-raw '{ 
+          '{ 
           "type" : "massage"
           "text" : "created" }'
         
