@@ -11,7 +11,11 @@ jobs:
     - name: create th issue using REST API
       run: |
        curl -- request POST \
-       --url 
+       --url https://api.github/repos/${{ github.repository }}/issue\
+       }}\
+       --header authorization
+       --header content type
+       
        
       
    
