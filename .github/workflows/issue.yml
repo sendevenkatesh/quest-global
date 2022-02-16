@@ -13,11 +13,11 @@ jobs:
        curl -X POST \
        https://github.com/sendevenkatesh/quest-global/${{ github.quest-global }}/issues \
        
-       -d '{
-         "title": "Automated issue for commit:" ${{ github.sha }}",
-         "body": "this issue Action workflow **${{ github.workflow}}**. \n\n
-         }' \
-       --fail
+       #-d '{
+        # "title": "Automated issue for commit:" ${{ github.sha }}",
+         #"body": "this issue Action workflow **${{ github.workflow}}**. \n\n
+         #}' \
+       #--fail
        
        
       
