@@ -10,10 +10,10 @@ jobs:
     steps: 
     - name: create th issue using REST API
       run: |
-       curl -- request POST \
-       --url https://api.github/repos/${{ github.repository }}/issues\
+       curl -X POST \
+       url https://api.github/repos/${{ github.repository }}/issues\
        
-       -H "Authorization: token OAUTH-TOKEN" ${{ secretes.GITHUB_TOKEN}}'\
+       -H "Authorization: OAUTH-TOKEN" ${{ secretes.GITHUB_TOKEN}}'\
        --header 'content-type: application/json'\
        --data '{
          "title": "issue:" ${{ github.sha }}",
