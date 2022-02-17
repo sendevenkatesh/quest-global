@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: actions
+        run: mkdir
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           script: |
