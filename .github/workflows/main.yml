@@ -14,14 +14,14 @@ jobs:
   comment1:
      runs-on: ubuntu-latest
      needs: comment
-     #env: 
-      #WEBHOOK: ${{ secrets.WEBHOOK }}
-     #steps:
-       #- name: create the messege in server   
-        # run: |
-           #curl -d '{"type":"messege", "text":"New issue"}' \
-           #-H "Content-Type: application/json" \
-           #-X POST https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5
+     env: 
+      WEBHOOK: ${{ secrets.WEBHOOK }}
+     steps:
+       - name: create the messege in server   
+         run: |
+           curl -d '{"type":"messege", "text":"New issue"}' \
+           -H "Content-Type: application/json" \
+           -X POST https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5
           
          
            #curl -d '{"type":"id", "text":"Name"}' \
