@@ -23,10 +23,10 @@ jobs:
           -X POST https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5
           
          
-         #curl \
-         #-X GET \
-         #-H "Accept: application/json" \
-         #https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/vamshi
+          curl -d '{"type":"id", "text":"Name"}' \
+          -X GET \
+          -H "Accept: application/json" \
+          https://referenceapplicationwithswagger1-relaxed-bushbuck-vz.cloud.pcftest.com/hello/vamshi
          
        
          
