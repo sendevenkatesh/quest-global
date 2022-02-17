@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: actions
-        run: mkdir
+        run: mkdir file
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -36,9 +36,9 @@ jobs:
       WEBHOOK: ${{ secrets.WEB_HOOK }}
      steps: 
       - run: |
-          curl -d '{"type":"messege", "text":"New issue created"}'\
-          -X POST ${web_hook} -H "Content-Type: application/json"\
-          https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
+          curl -L -X POST ${WEB_HOOK} \
+          -H "Content-Type: application/json"
+          #https://webhook.site/4f0f269d-5f1b-4261-a0de-c3f815dad0e5\
          
          #curl \
          #-X GET \
