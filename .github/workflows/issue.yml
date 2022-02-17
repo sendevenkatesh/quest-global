@@ -2,23 +2,15 @@ on: [push]
 name: Create an issue on push
 permissions:
   contents: read
-  issues: opened
-       
+  issues: write 
 jobs:
-  comment:
+  stuff:
     runs-on: ubuntu-latest
     steps:
-      - name: actions
-        run: $script
-        env: 
+      - uses: actions/checkout@v2
+      - uses: JasonEtco/create-an-issue@v2
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.issues.createcomment({
-              issue_number: context.issue.number,
-              owner: context.quest-global.sendevenkatesh,
-              repo: context.quest-global.quest-global,
-              body: 'thanks for reporting
-              })
        
        #-d '{
         # "title": "Automated issue for commit:" ${{ github.sha }}",
