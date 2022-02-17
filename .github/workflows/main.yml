@@ -16,7 +16,7 @@ jobs:
      needs: comment
      #env: 
       #WEBHOOK: ${{ secrets.WEBHOOK }}
-     steps:
+     #steps:
        #- name: create the messege in server   
         # run: |
            #curl -d '{"type":"messege", "text":"New issue"}' \
