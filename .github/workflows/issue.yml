@@ -2,7 +2,8 @@ on: [push]
 name: Create an issue on push
 permissions:
   contents: read
-  issues: write 
+  issues: opened
+       
 jobs:
   comment:
     runs-on: ubuntu-latest
@@ -12,7 +13,7 @@ jobs:
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           script: |
-              github.issues.createcomment({
+            github.issues.createcomment({
               issue_number: context.issue.number,
               owner: context.quest-global.sendevenkatesh,
               repo: context.quest-global.quest-global,
