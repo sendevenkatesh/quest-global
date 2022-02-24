@@ -1,2 +1,6 @@
-version=0.0.1
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+group = 'com.github.jitpack'
+version = '2.0'
 description=hello this is version
