@@ -20,7 +20,7 @@ jobs:
 
     - name: Generate versions
       uses: sendevenkatesh/quest-global@main
-      env:
+      with:
         version-source: file
         version-file: ${{ env.version-file }}
         version-file-extraction-pattern: '(?<=version=).+'
