@@ -19,10 +19,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
-    - name: Step 5 - Build with Gradle
-      uses: gradle/gradle-build-action@main
-      with:
-        arguments: build
+ 
+    - name: Test
+      run: ./gradlew
           
     - name: Step 6 - Listing the build file name
       run: |
