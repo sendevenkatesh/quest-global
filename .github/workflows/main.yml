@@ -23,9 +23,7 @@ jobs:
     - name: Test
       run: ./gradlew
           
-    - name: Step 6 - Listing the build file name
-      run: |
-          ls '${{ github.workspace }}'/build/libs
+ 
     - name: pwd
       run: pwd
       
