@@ -18,6 +18,15 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Step 5 - Build with Gradle
+      uses: gradle/gradle-build-action@v2.1.1
+      with:
+        arguments: build
+          
+    - name: Step 6 - Listing the build file name
+      run: |
+          ls '${{ github.workspace }}'/build/libs
     - name: pwd
       run: pwd
     
