@@ -29,5 +29,10 @@ jobs:
           ls '${{ github.workspace }}'/build/libs
     - name: pwd
       run: pwd
+      
+    - name: my-artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: path/to/artifact/world.txt
     
          
