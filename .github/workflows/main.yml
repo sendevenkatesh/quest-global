@@ -30,6 +30,7 @@ jobs:
     - name: my-artifact
       uses: actions/upload-artifact@v2
       with:
-        path: path/to/artifact/world.txt
+        path: work/quest-global/quest-global/dist/venkat.md
+
     
          
