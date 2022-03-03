@@ -2,6 +2,9 @@ on:
   push:
     branches:
     - 'main'
+  repository_dispatch:
+    types:
+      - webhook
   
 jobs: 
   build:
@@ -32,6 +35,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         path: ${{ github.workspace }}/artifact/world.txt
+    - run: |
+       curl -X POST https://github.com/sendevenkatesh/demo/dispatches     
+       --data "{\"event_type\":\"webhook\"}"
     
   
 
