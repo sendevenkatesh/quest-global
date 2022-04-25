@@ -5,3 +5,8 @@ changelog:
     labels: ["new"]
   - title: "Bugs"
     labels: ["fix"]
+  - title: "Dependency Upgrades"
+    labels: ["dependency"]
+  - title: "documentation"
+    labels: ["documentation"]
+ 
