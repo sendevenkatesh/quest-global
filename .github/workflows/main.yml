@@ -1,7 +1,7 @@
 # Trigger the workflow on milestone events
 on:
   milestone:
-    types: [open]
+    types: [closed]
   
   workflow_dispatch:
     inputs:
